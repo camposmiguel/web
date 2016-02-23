@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="appdam">
+
+  <head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script>
+      var app = angular.module("appdam",[]);
+
+      function PruebaController($scope) {
+        $scope.mensaje="Hola Mundo";
+        $scope.estado = true;
+
+        $scope.cambiarMensaje=function() {
+          if($scope.estado) {
+            $scope.mensaje="Adios mundo cruel :-)";
+            $scope.estado = false;
+          } else {
+            $scope.mensaje="Hola Mundo";
+            $scope.estado = true;
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body ng-controller="PruebaController">
+    <h1>{{mensaje}}</h1>
+    <button ng-click="cambiarMensaje()">Cambio</button>
+  </body>
+
+</html>

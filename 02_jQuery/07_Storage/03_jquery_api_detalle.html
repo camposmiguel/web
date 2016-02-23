@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOGIN APP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Mensaje error -->
+  <div class="row" >
+    <div class="col-xs-12">
+      <div class="alert alert-success" id="message" role="alert"></div>
+    </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  $.urlParam = function(name){
+  	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  	return results[1] || 0;
+  }
+
+  // http://rest.miguelcr.com/detalle.html?idobj=1234
+  $('#message').text($.urlParam('idobj'));
+
+});
+
+</script>
+</body>
+</html>

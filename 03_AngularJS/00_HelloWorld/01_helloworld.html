@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="appdam">
+
+  <head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script>
+      var app = angular.module("appdam",[]);
+
+      function PruebaController($scope) {
+        $scope.mensaje="Hola Mundo";
+      }
+    </script>
+  </head>
+
+  <body ng-controller="PruebaController">
+    <h1>{{mensaje}}: 2+2={{2+2}}</h1>
+  </body>
+
+</html>
